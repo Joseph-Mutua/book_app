@@ -23,7 +23,7 @@ export const GetBook = () => {
       <div>
 
         {pages.map((page, index) => {
-          return <p key={index}>{JSON.stringify(page.content)}</p>;
+          return <Link key={index}>{JSON.stringify(page.content)}</Link>;
         })}
       </div>
     </div>
