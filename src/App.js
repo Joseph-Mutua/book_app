@@ -3,14 +3,14 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  useQuery,
-  gql,
   HttpLink,
   from,
 } from "@apollo/client";
 import { onError } from "@apollo/client/link/error";
 
-// Handle Errors
+import { GetBook } from "./components/GetBook";
+
+// Logic to handle GraphQL and NEtwork errors
 const errorLink = onError(({ graphQLErrors, networkError }) => {
   if (graphQLErrors)
     graphQLErrors.forEach(({ message, locations, path }) =>
@@ -29,14 +29,14 @@ const link = from([
 ]);
 
 const client = new ApolloClient({
-  uri: link,
+  link: link,
   cache: new InMemoryCache(),
 });
 
 function App() {
   return (
-    <ApolloProvider>
-      
+    <ApolloProvider client={client}>
+      <GetBook />
     </ApolloProvider>
   );
 }
