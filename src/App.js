@@ -10,6 +10,7 @@ import { onError } from "@apollo/client/link/error";
 
 import { GetBook } from "./components/GetBook";
 
+
 // Logic to handle GraphQL and NEtwork errors
 const errorLink = onError(({ graphQLErrors, networkError }) => {
   if (graphQLErrors)
