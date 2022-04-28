@@ -17,10 +17,11 @@ code {
 }
 
 #page {
-  background-image: url("../public/background.png");
+  background-image: url("../public/background3.jpg");
   height: 600px;
   background-color: #cccccc;
   background-position: center;
+  border-radius: 50px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -72,4 +73,11 @@ code {
   pointer-events: none;
   box-shadow: none;
   color: #999;
+}
+
+#page-content {
+  font-family: "barlow semi condensed", sans-serif;
+  font-size: 52px;
+  line-height: 60px;
+  font-weight: 300;
 }

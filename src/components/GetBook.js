@@ -17,7 +17,6 @@ export const GetBook = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
-
   return (
     <div className="container">
       <Pagination pageData={pages} pageLimit={1} dataLimit={1} />
