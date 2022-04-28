@@ -1,10 +1,9 @@
 import React from "react";
 
-const Layout = () => {
+const Layout = ({ keyValue, data }) => {
   return (
-    <div className="row justify-content-center">
-      <div className="col border-right p-4" id="page1">Wooow</div>
-      <div className="col p-4" id="page2">Wooow</div>
+    <div className="col" id="page" key={keyValue}>
+      <h1 className="display-1">{JSON.stringify(data.content)}</h1>
     </div>
   );
 };
