@@ -8,7 +8,6 @@ import {
 } from "@apollo/client";
 import { onError } from "@apollo/client/link/error";
 import { GetBook } from "./components/GetBook";
-import Layout from "./components/pages/Layout";
 
 // Logic to handle GraphQL and NEtwork errors
 const errorLink = onError(({ graphQLErrors, networkError }) => {

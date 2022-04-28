@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import Layout from "./pages/Layout";
 
+
+// Receives 3 destructured props
+// padeData: an array of the fetched pages
+// pageLimit: The number of pages to be shown in the pagination. We'll show 1 page in this case
+// dataLimit: The nuumber of page content objects to be rendered on each page
+
 const Pagination = ({ pageData, pageLimit, dataLimit }) => {
   console.log(pageData);
   const [pages] = useState(Math.round(pageData.length / pageLimit));
@@ -11,7 +17,7 @@ const Pagination = ({ pageData, pageLimit, dataLimit }) => {
     setCurrentPage((page) => page + 1);
   };
 
-  
+
   const goToPreviousPage = () => {
     setCurrentPage((page) => page - 1);
   };
