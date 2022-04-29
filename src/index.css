@@ -80,4 +80,13 @@ code {
   font-size: 52px;
   line-height: 60px;
   font-weight: 300;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+  white-space: normal;
 }
+
+/* #page-content:hover {
+  cursor: pointer;
+} */
